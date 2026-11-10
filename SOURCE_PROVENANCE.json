@@ -1,0 +1,27 @@
+{
+  "target": "vendor/oneplus/kebab",
+  "sources": [
+    {
+      "repository": "https://github.com/TheMuppets/proprietary_vendor_oneplus_sm8250-common",
+      "branch": "lineage-24.0",
+      "commit": "e3f6fd86ad47653897753cc2a7a22e80c1b46a18",
+      "files": 2443
+    },
+    {
+      "repository": "https://github.com/TheMuppets/proprietary_vendor_oneplus_kebab",
+      "branch": "lineage-24.0",
+      "commit": "9ecfe6349188e4f961aa7fc878e478e23cc3a6aa",
+      "files": 107
+    }
+  ],
+  "generator": {
+    "repository": "tools/extract-utils",
+    "commit": "78ba5d58c4b06712e18bb387a2a72eac8fbc8d70",
+    "mode": "one kebab producer; regeneration only; no blob fixups executed"
+  },
+  "merged_list_sha256": "57ee2f7473acde7064ccc8829cc0fd239df1ba5622faf4bf6f69a2fb8672e6fc",
+  "files": 2550,
+  "blueprint_modules": 777,
+  "blob_contents": "preserved from the two reference repositories",
+  "status": "published integration baseline; PA vendor includes not activated; full build/device tests pending"
+}
