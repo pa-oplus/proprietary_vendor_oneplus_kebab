@@ -18,8 +18,11 @@ its service/config ownership and missing manifest declaration are handled in the
 device tree. OnePlus powerhint.xml remains the sole explicitly selected file.
 The intentional ODM fingerprint override and blob bytes are preserved.
 
-This remains an untested integration baseline. PA's system AIDL perf2 clients
-require reconciliation with the stock HIDL backend. Forty-two legacy HAL records,
+This remains an untested integration baseline. The exact reviewed PA system clients
+support HIDL 2.2 fallback with API 30 and no declared AIDL perf2 service. This
+corrects the earlier assumption of an unavoidable protocol mismatch. Device review
+6089e03 records both client hashes and dispatch evidence; linker/policy/runtime
+validation is still pending. Forty-two legacy HAL records,
 full source/variant/symbol compatibility, kernel/header integration, target VINTF
 matrices/SELinux, product build and hardware validation remain pending. The former
 full PA checkout is unavailable; source installation into its replacement is pending.

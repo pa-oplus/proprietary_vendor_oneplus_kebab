@@ -31,7 +31,9 @@
     "checks": "docs/vendor-integration-checks.json",
     "fingerprint_shim": "device/oneplus/kebab/compat/fingerprint",
     "camera_crypto_shims": "PA hardware/lineage/compat vendor providers",
-    "perf": "Stock vendor HIDL 2.2 selected; PA system AIDL perf2 client compatibility remains pending.",
-    "unresolved_legacy_hal_records": 42
+    "perf": "Stock HIDL 2.2 selected. Exact reviewed PA system clients support HIDL fallback for API 30 when AIDL perf2 is not declared; target/runtime validation pending.",
+    "unresolved_legacy_hal_records": 42,
+    "perf_review_commit": "6089e03",
+    "perf_review": "docs/perf-client-review.md"
   }
 }
