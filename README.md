@@ -1,21 +1,28 @@
 # OnePlus 8T (kebab) vendor — Paranoid Android
 
-Unified proprietary vendor baseline for `vendor/oneplus/kebab`, branch `calcite`.
-Contains 2,550 proprietary files from the matching TheMuppets `lineage-24.0`
-kebab and sm8250-common repositories. Exact commits and generation provenance
-are recorded in SOURCE_PROVENANCE.json; the merged input list is preserved in
+Unified proprietary output for `vendor/oneplus/kebab`, branch `calcite`.
+Contains 2,550 already-processed files from the matching TheMuppets lineage-24.0
+kebab and sm8250-common repositories. Source revisions and generator provenance
+are recorded in SOURCE_PROVENANCE.json; merged metadata is preserved in
 provenance/proprietary-files.txt.
 
-Build files were regenerated for one kebab producer with 777 unique named
-Blueprint modules. Blob contents, pins and existing Lineage processing are
-preserved; no binary/config/APK fixup pass was rerun. Existing generated files
-from the two inputs were not concatenated.
+The device tree strictly includes this single product/board output as of
+`pa-oplus/device_oneplus_kebab` commit `1a89a8a`. Its actual single extractor
+regenerates all four build files byte-for-byte with 777 unique named Blueprint
+modules. All 2,550 blob contents match the references and all 32 allowed pins
+match. No binary/config/APK fixup pass was replayed.
 
-This is an integration baseline, not a tested PA release. The fingerprint shim,
-camera/crypto provider variants, intentional fingerprint VINTF override, OnePlus
-perf/source ownership and remaining vendor/legacy declarations require final
-integration. PA product/vendor includes have not been activated by publication.
-Kernel/header, complete Soong/VINTF/SELinux and hardware validation remain pending.
+The device supplies the fingerprint shim and selects existing PA camera/crypto
+vendor compatibility modules. Vendor perf uses the stock OnePlus HIDL 2.2 stack;
+its service/config ownership and missing manifest declaration are handled in the
+device tree. OnePlus powerhint.xml remains the sole explicitly selected file.
+The intentional ODM fingerprint override and blob bytes are preserved.
 
-Device configuration and the detailed consolidation plan:
-https://github.com/pa-oplus/device_oneplus_kebab/tree/calcite
+This remains an untested integration baseline. PA's system AIDL perf2 clients
+require reconciliation with the stock HIDL backend. Forty-two legacy HAL records,
+full source/variant/symbol compatibility, kernel/header integration, target VINTF
+matrices/SELinux, product build and hardware validation remain pending. The former
+full PA checkout is unavailable; source installation into its replacement is pending.
+
+Detailed checks and integration boundaries:
+https://github.com/pa-oplus/device_oneplus_kebab/blob/calcite/docs/vendor-consolidation.md

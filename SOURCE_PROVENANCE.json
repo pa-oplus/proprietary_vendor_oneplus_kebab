@@ -23,5 +23,15 @@
   "files": 2550,
   "blueprint_modules": 777,
   "blob_contents": "preserved from the two reference repositories",
-  "status": "published integration baseline; PA vendor includes not activated; full build/device tests pending"
+  "status": "Device configuration strictly selects this unified output at device tree 1a89a8a; no full product build/device validation.",
+  "device_integration": {
+    "repository": "https://github.com/pa-oplus/device_oneplus_kebab",
+    "branch": "calcite",
+    "commit": "1a89a8a",
+    "checks": "docs/vendor-integration-checks.json",
+    "fingerprint_shim": "device/oneplus/kebab/compat/fingerprint",
+    "camera_crypto_shims": "PA hardware/lineage/compat vendor providers",
+    "perf": "Stock vendor HIDL 2.2 selected; PA system AIDL perf2 client compatibility remains pending.",
+    "unresolved_legacy_hal_records": 42
+  }
 }
