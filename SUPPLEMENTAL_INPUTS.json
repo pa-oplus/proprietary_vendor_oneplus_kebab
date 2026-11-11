@@ -1,0 +1,17 @@
+{
+  "origin": "Local PA common DSP snapshot; original repository commit metadata is unavailable. Exact input bytes are pinned below. No binary fixups applied.",
+  "files": [
+    {
+      "path": "vendor/bin/dspservice",
+      "source_path": "aospa-trees/vendor/qcom/common/vendor/dsprpcd/proprietary/vendor/bin/dspservice",
+      "sha1": "081468b9bc63cab921ac1e37a95eb93bd16e23f9",
+      "sha256": "85f5f2174a11bd3e515ec8bfec2b8429350512b9e2cc33aca7bacfa5eec29dbd"
+    },
+    {
+      "path": "vendor/etc/init/vendor.qti.hardware.dsp@1.0-service.rc",
+      "source_path": "aospa-trees/vendor/qcom/common/vendor/dsprpcd/proprietary/vendor/etc/init/vendor.qti.hardware.dsp@1.0-service.rc",
+      "sha1": "fbf2bb38ca6bdddf98c7123da9e1f263a4eec55f",
+      "sha256": "dc2d534f3425c73e56bd9a215c8a7094b9a6973e87531f5de2e0c2bd2283b9e0"
+    }
+  ]
+}

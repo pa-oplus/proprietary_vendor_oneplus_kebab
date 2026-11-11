@@ -1,31 +1,33 @@
 # OnePlus 8T (kebab) vendor — Paranoid Android
 
-Unified proprietary output for `vendor/oneplus/kebab`, branch `calcite`.
-Contains 2,550 already-processed files from the matching TheMuppets lineage-24.0
-kebab and sm8250-common repositories. Source revisions and generator provenance
-are recorded in SOURCE_PROVENANCE.json; merged metadata is preserved in
-provenance/proprietary-files.txt.
+Unified output for `vendor/oneplus/kebab`, branch `calcite`. The single extractor
+and strict device product/board includes are in pa-oplus/device_oneplus_kebab.
 
-The device tree strictly includes this single product/board output as of
-`pa-oplus/device_oneplus_kebab` commit `1a89a8a`. Its actual single extractor
-regenerates all four build files byte-for-byte with 777 unique named Blueprint
-modules. All 2,550 blob contents match the references and all 32 allowed pins
-match. No binary/config/APK fixup pass was replayed.
+The original 2,550 processed TheMuppets lineage-24.0 files are unchanged. Two pinned
+PA common DSP server input files supply the previously missing DSP service/RC.
+Their exact input hashes and local source paths are in SUPPLEMENTAL_INPUTS.json;
+the original supplemental repository commit metadata is unavailable. Source
+provenance and the active merged-list hash are recorded in SOURCE_PROVENANCE.json.
 
-The device supplies the fingerprint shim and selects existing PA camera/crypto
-vendor compatibility modules. Vendor perf uses the stock OnePlus HIDL 2.2 stack;
-its service/config ownership and missing manifest declaration are handled in the
-device tree. OnePlus powerhint.xml remains the sole explicitly selected file.
-The intentional ODM fingerprint override and blob bytes are preserved.
+All 2,552 entries regenerate four identical build files with 778 unique named
+vendor modules. All 34 allowed pins pass. Original input bytes and supplemental
+source bytes match their references. No binary/config/APK fixup pass was replayed.
 
-This remains an untested integration baseline. The exact reviewed PA system clients
-support HIDL 2.2 fallback with API 30 and no declared AIDL perf2 service. This
-corrects the earlier assumption of an unavoidable protocol mismatch. Device review
-6089e03 records both client hashes and dispatch evidence; linker/policy/runtime
-validation is still pending. Forty-two legacy HAL records,
-full source/variant/symbol compatibility, kernel/header integration, target VINTF
-matrices/SELinux, product build and hardware validation remain pending. The former
-full PA checkout is unavailable; source installation into its replacement is pending.
+The device selects stock graphics, alarm, media/WFD and perf without competing
+common proprietary imports. Fingerprint/camera/crypto compatibility providers are
+selected. Exact PA system perf clients have a HIDL 2.2 fallback for shipping API
+30 when no AIDL perf2 service is declared; runtime behavior is untested.
 
-Detailed checks and integration boundaries:
-https://github.com/pa-oplus/device_oneplus_kebab/blob/calcite/docs/vendor-consolidation.md
+Static legacy HAL resolution is complete in the device tree: 51 records declared,
+one unsupported optional Oplus subsystem-radio interface explicitly not selected.
+Thirty-four recorded local/reference-source/vendor fragments merge into 109 unique
+instances and preserve the intentional fingerprint override. These checks do not
+prove that every service registers or works in a built product.
+
+Required source selections and an audio registration patch are prepared. A full
+PA source checkout, kernel/header integration, complete module/variant/ABI/linker,
+SELinux/matrix, product compilation and hardware tests remain pending. This is an
+integration baseline, not a tested or boot-verified release.
+
+Current gates and evidence:
+https://github.com/pa-oplus/device_oneplus_kebab/blob/calcite/docs/INTEGRATION_STATUS.md
