@@ -6,7 +6,6 @@ PRODUCT_SOONG_NAMESPACES += \
     vendor/oneplus/kebab
 
 PRODUCT_COPY_FILES += \
-    vendor/oneplus/kebab/proprietary/vendor/lib64/vendor.qti.hardware.fm@1.0.so:$(TARGET_COPY_OUT_VENDOR)/lib64/vendor.qti.hardware.fm@1.0.so \
     vendor/oneplus/kebab/proprietary/odm/etc/acdbdata/Audio_Parameter_Version.txt:$(TARGET_COPY_OUT_ODM)/etc/acdbdata/Audio_Parameter_Version.txt \
     vendor/oneplus/kebab/proprietary/odm/etc/acdbdata/Bluetooth_cal.acdb:$(TARGET_COPY_OUT_ODM)/etc/acdbdata/Bluetooth_cal.acdb \
     vendor/oneplus/kebab/proprietary/odm/etc/acdbdata/General_cal.acdb:$(TARGET_COPY_OUT_ODM)/etc/acdbdata/General_cal.acdb \
