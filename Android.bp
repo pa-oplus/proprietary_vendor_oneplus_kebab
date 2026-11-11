@@ -21334,7 +21334,6 @@ cc_prebuilt_binary {
                 "libsdmutils",
                 "libgrallocutils",
                 "libui",
-                "libgpu_tonemapper",
                 "libEGL",
                 "libGLESv2",
                 "libGLESv3",
