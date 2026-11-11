@@ -2422,7 +2422,6 @@ PRODUCT_PACKAGES += \
     imsdatadaemon \
     imsqmidaemon \
     imsrcsd \
-    init.mdm \
     init.qti.chg_policy \
     irsc_util \
     ks \

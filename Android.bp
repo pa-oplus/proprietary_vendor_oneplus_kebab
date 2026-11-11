@@ -21700,14 +21700,6 @@ cc_prebuilt_binary {
 }
 
 sh_binary {
-    name: "init.mdm",
-    owner: "oneplus",
-    src: "proprietary/vendor/bin/init.mdm.sh",
-    filename: "init.mdm.sh",
-    soc_specific: true,
-}
-
-sh_binary {
     name: "init.qti.chg_policy",
     owner: "oneplus",
     src: "proprietary/vendor/bin/init.qti.chg_policy.sh",
